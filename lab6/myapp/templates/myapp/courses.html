@@ -1,0 +1,21 @@
+
+
+{% block content %}
+  <h1>Courses</h1>
+  
+  <ul>
+    {% for course in courses_list %}
+      <li>{{ course.name }}</li>
+    {% endfor %}
+  </ul>
+  
+  
+  <h2>Add Course</h2>
+  <form method="post" action="{% url 'courses' %}">
+    {% csrf_token %}
+    {{ course_form.as_p }}
+    <button type="submit">Add</button>
+  </form>
+  
+  <a href="{% url 'students' %}">Add Student</a>
+{% endblock %}

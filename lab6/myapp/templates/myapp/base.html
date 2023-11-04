@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Project</title>
+</head>
+<body>
+    <header>
+        <h1>My Project</h1>
+    </header>
+    <nav>
+        <a href="{% url 'students' %}">Students</a>
+        <a href="{% url 'courses' %}">Courses</a>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
